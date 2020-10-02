@@ -1,0 +1,15 @@
+{
+  "name": "react-to-svelte-demo",
+  "version": "1.0.0",
+  "description": "A demo project I set up to demonstrate the differences in React + Next and Svelte + Sapper for a knowledge share session at work",
+  "scripts": {
+    "dev:react": "npm --prefix react run dev",
+    "dev:svelte": "npm --prefix svelte run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidexns/react-to-svelte-demo.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/davidexns/react-to-svelte-demo#readme"
+}
