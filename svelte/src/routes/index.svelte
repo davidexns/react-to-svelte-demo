@@ -1,5 +1,23 @@
 <script>
-	// How do we state and fancy javascript stuff??
+	import { onMount } from 'svelte'
+	import { fly } from 'svelte/transition'
+
+	import FloatingBox from '../components/FloatingBox.svelte'
+	import GameItem from '../components/GameItem.svelte'
+
+	import { getGames } from '../../../shared/dataUtil'
+	import { filterGames } from '../../../shared/filterUtils'
+	// import Field from '../components/Field.svelte'
+
+	let games = []
+	let search = ''
+	$: visibleGames = filterGames(games, search)
+	$: showWtf = visibleGames.length < 1
+
+	onMount(async () => {
+		const res = await getGames()
+		games = res
+	})
 </script>
 
 <svelte:head>
@@ -9,15 +27,40 @@
 <div class="container">
 	<main>
 		<header>
-			<!-- We want to say something cool maybe? -->
+			<h1>These are, like, cool games or whatever</h1>
 		</header>
 
-		<!-- <FloatingBox>
-		</FloatingBox> -->
+		<FloatingBox>
+			<form on:submit|preventDefault>
+				<div>
+					<label for="search">Search if you want to. Or don't.</label>
+					<!-- Not idiomatic svelte, but you could do this, but you should probably just bind -->
+					<!-- <input id="search" type="text" value={search} on:input={e => search = e.target.value} /> -->
+					<input id="search" type="text" bind:value={search} />
+				</div>
+			</form>
+		</FloatingBox>
 
 		<div class="content">
-			<!-- Seems like content should go here probably maybe for sure perhaps -->
+			{#if visibleGames.length > 0}
+				<ol>
+					{#each visibleGames as { name, platform } (`${name}-${platform}`)}
+						<GameItem {name} {platform} />
+					{/each}
+				</ol>
+			{:else}
+				<p>"{search}" ain't no game I've ever heard of</p>
+			{/if}
 		</div>
+
+		{#if showWtf}
+			<p
+				in:fly={{ x: 300, duration: 1000 }}
+				out:fly={{ x: -300, duration: 1000 }}
+			>
+				Why would you even search for that?
+			</p>
+		{/if}
 	</main>
 </div>
 

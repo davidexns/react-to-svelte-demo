@@ -1,5 +1,5 @@
 <div class="container">
-	<p>How are we gonna childrens in Svelte???</p>
+	<slot />
 </div>
 
 <style>

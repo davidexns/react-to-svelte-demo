@@ -1,11 +1,12 @@
 <script>
-	// How do we define props??
+	export let platform
+	export let name
 </script>
 
 <li>
 	<div class="content">
-		<p class="name">I am a game item.</p>
-		<p class="platform">Make me better!</p>
+		<p class="name">{name}</p>
+		<p class="platform">{platform}</p>
 	</div>
 </li>
 
