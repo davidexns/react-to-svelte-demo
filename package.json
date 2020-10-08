@@ -4,7 +4,8 @@
   "description": "A demo project I set up to demonstrate the differences in React + Next and Svelte + Sapper for a knowledge share session at work",
   "scripts": {
     "dev:react": "npm --prefix react run dev",
-    "dev:svelte": "npm --prefix svelte run dev"
+    "dev:svelte": "npm --prefix svelte run dev",
+    "superinstall": "npm --prefix svelte install && npm --prefix react install"
   },
   "repository": {
     "type": "git",

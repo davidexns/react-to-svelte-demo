@@ -8,12 +8,12 @@ module.exports = [
     name: "Donkey Kong Country",
   },
   {
-    platform: "Nintendo 64",
-    name: "GoldenEye 007",
-  },
-  {
     platform: "Super Nintendo",
     name: "Disney's Aladdin",
+  },
+  {
+    platform: "Nintendo 64",
+    name: "GoldenEye 007",
   },
   {
     platform: "Atari 2600",
