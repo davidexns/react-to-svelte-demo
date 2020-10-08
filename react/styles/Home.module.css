@@ -1,123 +1,112 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
 .main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
+.header {
+  --header-background: var(--purple900);
+  --header-border: var(--primary-teal);
+  background: var(--header-background);
+  background: linear-gradient(32deg);
+  align-self: stretch;
+  margin: 24px 32px 0px;
+  padding: 96px 32px;
+  border: 6px solid var(--header-border);
+  border-radius: 64px;
+  box-shadow: 0 0 12px 3px var(--header-border),
+    inset 0 0 12px 4px var(--header-border), 0 0 0 12px var(--header-background),
+    4px 4px 18px 12px var(--header-border);
+}
+
+.fieldLabel {
+  display: block;
+  margin-block-end: 6px;
+  letter-spacing: 0.075em;
+}
+
+.form {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.footer img {
-  margin-left: 0.5rem;
+.content {
+  --content-box-inline-margin: 32px;
+  max-width: 680px;
+  width: calc(100% - var(--content-box-inline-margin) * 2);
+  background: var(--purple700);
+  box-shadow: 4px 4px 16px var(--pink600), inset 0px 0px 12px var(--pink600),
+    8px 8px 1px var(--purple400), 16px 16px 1px var(--purple500),
+    24px 24px 1px var(--purple600);
+  padding: 24px;
+  margin-block-start: 48px;
+  margin-block-end: 32px;
+  margin-inline-start: var(--content-box-inline-margin);
+  margin-inline-end: var(--content-box-inline-margin);
+  border: 4px solid var(--pink400);
+  border-radius: 8px 0px;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.list {
+  list-style: none;
+  counter-reset: game-list-counter;
+  padding: 0;
+  margin: 0;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.list li:not(:last-of-type) {
+  border-bottom: 2px solid hsl(251, 21%, 34%);
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.input {
+  background: var(--purple900);
+  color: var(--pink300);
+  padding: 8px;
+  border-radius: 4px;
+  border: 2px solid var(--purple300);
+  font-size: 1rem;
+  min-width: 320px;
+  font-family: "Press Start 2P";
 }
 
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+  font-size: 1.8rem;
+  font-family: "Press Start 2P";
+  letter-spacing: none;
+  background: -webkit-linear-gradient(
+    32deg,
+    var(--pink400),
+    var(--purple400),
+    var(--pink400)
+  );
+  background-clip: text;
   text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.5px var(--pink200);
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.notFound {
+  font-size: 1.2rem;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+@media screen and (min-width: 480px) {
+  .title {
+    font-size: 2.8rem;
+  }
 }
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  max-width: 800px;
-  margin-top: 3rem;
-}
-
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+@media screen and (min-width: 780px) {
+  .title {
+    font-size: 4rem;
   }
 }
