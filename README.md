@@ -2,12 +2,16 @@
 
 A demo project I set up to demonstrate the differences in React + Next and Svelte + Sapper for a knowledge share session at work
 
-## Start the React example app
+## Getting started
+
+Since I haven't set this up as a full-fledged monorepo with something like `lerna`, you'll have to install the dependencies for the respective apps in one of two ways. Either run `npm run superinstall` from the root directory or `cd` into both of the `react` and `svelte` folders and `npm install`
+
+### Start the React example app
 
 1. **Option 1:** From the root of this project, run `npm run dev:react`
 1. **Option 2:** `cd react` and then run `npm run dev`
 
-## Start the Svelte example app
+### Start the Svelte example app
 
 1. **Option 1:** From the root of this project, run `npm run dev:svelte`
 1. **Option 2:** `cd svelte` and then run `npm run dev`
