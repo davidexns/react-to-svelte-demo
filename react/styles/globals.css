@@ -1,9 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+:root {
+  --primary-teal: hsl(170, 60%, 65%);
+  --secondary-teal: hsl(170, 82%, 78%);
+  --pink200: hsl(350, 66%, 84%);
+  --pink300: hsl(352, 72%, 80%);
+  --pink400: hsl(352, 61%, 72%);
+  --pink500: hsl(352, 26%, 69%);
+  --pink600: hsl(352, 48%, 56%);
+  --purple100: hsl(259, 11%, 97%);
+  --purple300: hsl(257, 48%, 76%);
+  --purple400: hsl(286, 52%, 49%);
+  --purple500: hsl(281, 44%, 33%);
+  --purple600: hsl(272, 59%, 24%);
+  --purple700: hsl(251, 56%, 16%);
+  --purple800: hsl(261, 26%, 13%);
+  --purple900: hsl(256, 41%, 8%);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Orbitron, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: var(--purple100);
+  letter-spacing: 0.075em;
+  background-color: var(--purple800);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='175' width= '175' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23372B54' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='10.5' y1='10.5' x2='19.5' y2='19.5' /%3E%3Cline x1='10.5' y1='19.5' x2='19.5' y2='10.5' /%3E%3Ccircle cx='35' cy='35' r='5.5' /%3E%3Crect x='59.5' y='9.5' width='11' height='11' /%3E%3Cpolygon points='85.17 30 79.4 40 90.94 40 85.17 30' /%3E%3Crect x='9.55' y='59.53' width='11' height='11' /%3E%3Cpolygon points='35.22 80.03 29.44 90.03 40.99 90.03 35.22 80.03' /%3E%3Cline x1='60.5' y1='60.5' x2='69.5' y2='69.5' /%3E%3Cline x1='60.5' y1='69.5' x2='69.5' y2='60.5' /%3E%3Ccircle cx='85' cy='85' r='5.5' /%3E%3C/g%3E%3C/svg%3E");
 }
 
 a {
